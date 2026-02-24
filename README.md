@@ -3,11 +3,11 @@
 [![last commit](https://img.shields.io/github/last-commit/plopesc/ddev-gh)](https://github.com/plopesc/ddev-gh/commits)
 [![release](https://img.shields.io/github/v/release/plopesc/ddev-gh)](https://github.com/plopesc/ddev-gh/releases/latest)
 
-# DDEV Gh
+# DDEV GH
 
 ## Overview
 
-This add-on integrates Gh into your [DDEV](https://ddev.com/) project.
+This add-on integrates GH CLI into your [DDEV](https://ddev.com/) project.
 
 ## Installation
 
@@ -16,32 +16,21 @@ ddev add-on get plopesc/ddev-gh
 ddev restart
 ```
 
-After installation, make sure to commit the `.ddev` directory to version control.
+If your GitHub token is already stored in `~/.config/gh/hosts.yml`, no additional configuration is required. Otherwise, you must set either the `GH_TOKEN` or `GITHUB_TOKEN` environment variable with a valid token.
+
+To retrieve your token, run the following command on your host machine:
+```sh
+gh auth token
+```
 
 ## Usage
 
-| Command | Description |
-| ------- | ----------- |
-| `ddev describe` | View service status and used ports for Gh |
-| `ddev logs -s gh` | Check Gh logs |
+| Command                                     | Description                              |
+|---------------------------------------------|------------------------------------------|
+| `ddev exec gh --version`                    | Check the installed version              |
+| `ddev exec gh --help`                       | View available commands                  |
 
-## Advanced Customization
-
-To change the Docker image:
-
-```bash
-ddev dotenv set .ddev/.env.gh --gh-docker-image="ddev/ddev-utilities:latest"
-ddev add-on get plopesc/ddev-gh
-ddev restart
-```
-
-Make sure to commit the `.ddev/.env.gh` file to version control.
-
-All customization options (use with caution):
-
-| Variable | Flag | Default |
-| -------- | ---- | ------- |
-| `GH_DOCKER_IMAGE` | `--gh-docker-image` | `ddev/ddev-utilities:latest` |
+The full documentation about GH CLI can be gound at the ]GH CLI documentation page](https://cli.github.com/).
 
 ## Credits
 
