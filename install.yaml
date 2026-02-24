@@ -3,6 +3,5 @@ name: gh-cli
 project_files:
   - docker-compose.gh-cli.yaml
   - config.gh-cli.yaml
-  - web-build/Dockerfile.gh-cli
 
 ddev_version_constraint: '>= v1.24.3'
