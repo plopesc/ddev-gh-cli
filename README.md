@@ -1,9 +1,9 @@
 [![add-on registry](https://img.shields.io/badge/DDEV-Add--on_Registry-blue)](https://addons.ddev.com)
-[![tests](https://github.com/plopesc/ddev-gh/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/plopesc/ddev-gh/actions/workflows/tests.yml?query=branch%3Amain)
-[![last commit](https://img.shields.io/github/last-commit/plopesc/ddev-gh)](https://github.com/plopesc/ddev-gh/commits)
-[![release](https://img.shields.io/github/v/release/plopesc/ddev-gh)](https://github.com/plopesc/ddev-gh/releases/latest)
+[![tests](https://github.com/plopesc/ddev-gh-cli/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/plopesc/ddev-gh-cli/actions/workflows/tests.yml?query=branch%3Amain)
+[![last commit](https://img.shields.io/github/last-commit/plopesc/ddev-gh-cli)](https://github.com/plopesc/ddev-gh-cli/commits)
+[![release](https://img.shields.io/github/v/release/plopesc/ddev-gh-cli)](https://github.com/plopesc/ddev-gh-cli/releases/latest)
 
-# DDEV GH
+# DDEV GH CLI
 
 ## Overview
 
@@ -12,7 +12,7 @@ This add-on integrates GH CLI into your [DDEV](https://ddev.com/) project.
 ## Installation
 
 ```bash
-ddev add-on get plopesc/ddev-gh
+ddev add-on get plopesc/ddev-gh-cli
 ddev restart
 ```
 
