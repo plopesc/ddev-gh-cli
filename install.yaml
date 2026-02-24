@@ -2,5 +2,7 @@ name: gh
 
 project_files:
   - docker-compose.gh.yaml
+  - config.gh.yaml
+  - web-build/Dockerfile.gh
 
 ddev_version_constraint: '>= v1.24.3'

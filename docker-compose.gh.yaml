@@ -1,15 +1,11 @@
 #ddev-generated
+# Mount GH host configuration into the web container so that `gh`
+# inside the container shares the same global.
+# The pre-start hook in config.gh.yaml ensures all host paths exist
+# as the correct type (file vs. directory) before Docker attempts to bind-mount them.
+# Without that hook, Docker would create a directory at any missing file path,
+# silently breaking the mount instead of raising an error.
 services:
-  gh:
-    container_name: ddev-${DDEV_SITENAME}-gh
-    image: ${GH_DOCKER_IMAGE:-ddev/ddev-utilities:latest}
-    command: tail -f /dev/null
-    restart: "no"
-    # These labels ensure this service is discoverable by DDEV.
-    labels:
-      com.ddev.site-name: ${DDEV_SITENAME}
-      com.ddev.approot: ${DDEV_APPROOT}
-
+  web:
     volumes:
-      - ".:/mnt/ddev_config"
-      - "ddev-global-cache:/mnt/ddev-global-cache"
+      - "${HOME}/.config/gh:${HOME}/.config/gh:ro"

@@ -1,0 +1,7 @@
+#ddev-generated
+hooks:
+  pre-start:
+    # Ensure host-side GH paths exist so Docker bind-mounts them as the
+    # correct type (file vs directory).  If a file does not exist, Docker would
+    # create a directory at that path instead, breaking the mount.
+    - exec-host: "mkdir -p ~/.config/gh
