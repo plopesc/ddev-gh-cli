@@ -30,7 +30,7 @@ gh auth token
 | `ddev exec gh --version`                    | Check the installed version              |
 | `ddev exec gh --help`                       | View available commands                  |
 
-The full documentation about GH CLI can be gound at the ]GH CLI documentation page](https://cli.github.com/).
+The full documentation about GH CLI can be gound at the [GH CLI documentation page](https://cli.github.com/).
 
 ## Credits
 
