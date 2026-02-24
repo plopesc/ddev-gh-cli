@@ -5,3 +5,4 @@ hooks:
     # correct type (file vs directory).  If a file does not exist, Docker would
     # create a directory at that path instead, breaking the mount.
     - exec-host: "mkdir -p ~/.config/gh"
+webimage_extra_packages: [gh]
