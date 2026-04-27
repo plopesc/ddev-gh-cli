@@ -5,4 +5,8 @@ hooks:
     # correct type (file vs directory).  If a file does not exist, Docker would
     # create a directory at that path instead, breaking the mount.
     - exec-host: "mkdir -p ~/.config/gh"
+web_environment:
+  # Disable GH CLI telemetry by default. To enable it, set GH_TELEMETRY=true
+  # in your project's .ddev/config.yaml under web_environment.
+  - GH_TELEMETRY=false
 webimage_extra_packages: [gh]

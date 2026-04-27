@@ -30,7 +30,20 @@ gh auth token
 | `ddev exec gh --version`                    | Check the installed version              |
 | `ddev exec gh --help`                       | View available commands                  |
 
-The full documentation about GH CLI can be gound at the [GH CLI documentation page](https://cli.github.com/).
+The full documentation about GH CLI can be found at the [GH CLI documentation page](https://cli.github.com/).
+
+## Telemetry
+
+GH CLI telemetry is **disabled by default** in this add-on via the `GH_TELEMETRY=false` environment variable.
+
+To enable telemetry, add the following to your project's `.ddev/config.yaml`:
+
+```yaml
+web_environment:
+  - GH_TELEMETRY=true
+```
+
+Then run `ddev restart` for the change to take effect.
 
 ## Credits
 
